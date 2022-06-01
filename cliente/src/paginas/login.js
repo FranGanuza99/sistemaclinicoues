@@ -18,17 +18,17 @@ const Login = () => {
  
         if(response.data.length>0){
           var respuesta = response.data[0];
-          //cookies.set('nombre', respuesta.nombreusuario + " | ", {path: "/"});
-          //cookies.set('usuario',respuesta);
-          /*swal({
+          cookies.set('nombre', respuesta.nombreusuario + " | ", {path: "/"});
+          cookies.set('usuario',respuesta);
+          swal({
             title: "Exito!",
             text: "Bienvenido "+respuesta.nombreusuario +"!",
             icon: "success",
             button: `Entendido`, 
-          }).then((result) => { */
+           }).then((result) => { 
             window.location.href='./';
             console.log(respuesta);
-           //});
+           });
         }
     })
     .catch(error=>{      
