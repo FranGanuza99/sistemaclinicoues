@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const { iniciarBaseDatos,} = require('./controladores/controlador');
+//const { iniciarBaseDatos,} = require('./controladores/controlador');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 app.set('authTokens', []);
@@ -17,6 +17,6 @@ app.use(require('./rutas/index'));
 
 app.listen(process.env.PORT | PORT,()=>{
     console.log("Yey, funcionaaa");
-    iniciarBaseDatos();
+    //iniciarBaseDatos();
 })
 
