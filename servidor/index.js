@@ -15,7 +15,7 @@ app.use('/docs', express.static(path.join(__dirname, 'docs')));
 // Routes
 app.use(require('./rutas/index'));
 
-app.listen(process.env.PUERTO,()=>{
+app.listen(process.env.PORT | PORT,()=>{
     console.log("Yey, funcionaaa");
     iniciarBaseDatos();
 })
